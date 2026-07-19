@@ -1,11 +1,10 @@
 import React from 'react'
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
-import top from "./../images/envelop/top-side-envelop.webp";
-import side from "./../images/envelop/side-envelop.webp";
-import stamp from "./../images/envelop/stamp.webp";
-import envelopDetailing from "./../images/envelop/envelop-detailing.webp"
+const top = "https://optim.tildacdn.net/tild6364-3438-4161-b964-613234643831/-/format/webp/623915249_2629494717.png.webp";
+const side = "https://optim.tildacdn.net/tild6233-6433-4662-a437-316665346637/-/format/webp/Gemini_Generated_Ima.png.webp";
+const stamp =  "https://optim.tildacdn.net/tild3366-6538-4432-b138-323436663963/-/resize/320x/-/format/webp/623915249_2629494717.png.webp";
+const envelopDetailing = "https://optim.tildacdn.net/tild6566-6361-4436-a235-323435366264/-/resize/376x/-/format/webp/line_flower_1.png.webp"
 
 export default function EnvelopeIntro() {
   const [open, setOpen] = useState(false);
@@ -19,13 +18,13 @@ export default function EnvelopeIntro() {
             {/*Top Part*/}
             <img src={top} className={`absolute z-20 min-w-5xl max-w-5xl aspect-5/3
                 top-0 transition-all delay-600 duration-1000 ease-in-out object-contain
-                ${open ? "translate-y-[-150vh] opacity-0" : "-translate-y-30"}`}/>
+                ${open ? "translate-y-[-150vh] opacity-0" : "-translate-y-30"}`} alt="Envelope top"/>
 
             {/* Stamp Button */}
             <button onClick={() => setOpen(true)}
                 className="absolute z-40 left-1/2 top-[320px] -translate-x-1/2">
 
-                <img src={stamp} className={`w-40 h-40 transition-all duration-700 ease-in-out
+                <img src={stamp} alt="Envelope stamp" className={`w-40 h-40 transition-all duration-700 ease-in-out
                     ${open ? "scale-125 opacity-0" : "scale-100 opacity-100"}`}/>
             </button>
 
@@ -35,12 +34,12 @@ export default function EnvelopeIntro() {
                 ${open ? "translate-y-[150vh] opacity-0" : "translate-y-0"} `}/>
 
             {/* left Part */}
-            <img src={side} className={`absolute -rotate-90 min-w-5xl max-w-5xl aspect-5/3
+            <img src={side} alt="Envelope left" className={`absolute -rotate-90 min-w-5xl max-w-5xl aspect-5/3
                 bottom-0 transition-all delay-600 duration-1000 ease-in-out object-contain
                 ${open ? "translate-x-[-150vh] opacity-0" : "-translate-y-53 -translate-x-60"} `}/>
 
             {/* right Part */}
-            <img src={side} className={`absolute rotate-90 min-w-5xl max-w-5xl aspect-5/3
+            <img src={side} alt="Envelope right" className={`absolute rotate-90 min-w-5xl max-w-5xl aspect-5/3
                 bottom-0 transition-all delay-600 duration-1000 ease-in-out object-contain
                 ${open ? "translate-x-[150vh] opacity-0" : "-translate-y-53 translate-x-60"} `}/>
 
@@ -52,7 +51,7 @@ export default function EnvelopeIntro() {
                     <span className='text-4xl'>
                         هناء & حمزة
                     </span>
-                    <img src={envelopDetailing} className='w-[188px]' />
+                    <img src={envelopDetailing} className='w-[188px]' alt="Envelope detailing"/>
             </div>
 
         </div>
